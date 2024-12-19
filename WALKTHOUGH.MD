@@ -129,29 +129,40 @@
    - **Comparison to IIS**:
      - Explain NodeJS's role in replacing IIS for hosting applications.
      - Highlight the benefits of NodeJS, such as better scalability, lighter footprint, and modern ecosystem.
+     - [View NodeJS Hosting Role](STAGING/3-NODEJS-SSL-RELIANCE.MD)
 ---
 
 ### 3. **Security Implications**
    - **NodeJS Security Best Practices**:
      - Enforced HTTPS using DHS-approved certificates.
+       - [View HTTPS](STAGING/2-NODEJSHTTPS.MD)     
      - Middleware implementation for rate limiting, CSRF, and input validation.
+       - [View Middleware](STAGING/9-NODEJS-MIDDLEWARE-SEC.MD)
      - Dependency audits using `npm audit` and third-party tools (e.g., Snyk).
+       - [View Audits Scanning](STAGING/7-NODEJS-SCANS.MD)     
    - **Service Management**:
      - Use PM2 or Windows Service Manager for process monitoring and auto-recovery.
+       - [View PM2 Process Manager](STAGING/4-NODEJS-PM2-TOOL.MD)     
+       - <div style="text-align: center;"><img src="STAGING/PM2-Setup.png" alt="PM2 Tool" width="500" /></div>
    - **Compliance**:
      - TypeScript’s static typing ensures secure and maintainable code.
+       - [View Typescript Compliance](COMPLIANCE-OWASP/2-TYPESCRIPT-COMPLIANCE.MD)     
      - OWASP-aligned development practices.
+       - [View OWASP Compliance](COMPLIANCE-OWASP/3-OWASP-COMPLIANCE.MD)     
+       - [View OWASP Ensuring](COMPLIANCE-OWASP/5-OWASP-ENSURING-PRACTICE.MD)     
      - Secure authentication and authorization mechanisms.
-
+       - [View Mechanisms](COMPLIANCE-OWASP/4-AUTHENTICATION-SECURITY.MD)          
 ---
 
 ### 4. **Enterprise Compatibility**
    - **ReactJS vs. PowerBI**:
      - **Modularity**:
        - ReactJS charts (e.g., Chart.js, D3.js, or Recharts) are fully customizable. Developers can tailor components to fit the exact needs of a web page, seamlessly blending with other UI elements.
+          - [View Modularity](MODULARITY-POWERBI/1-MODULARITY.MD)
        - PowerBI requires embedding entire dashboards, which can feel siloed and lacks fine-grain control over specific visual elements.
      - **Web Development Flexibility**:
        - ReactJS components integrate directly into the frontend codebase, adapting dynamically to the application's needs.
+          - [View Flexibility](MODULARITY-POWERBI/2-REACTJS-FLEXIBILITY.MD)                
        - PowerBI is primarily a business intelligence platform, not a flexible web development tool. It often necessitates workarounds for customization, limiting rapid development cycles.
      - **Platform Independence**:
        - ReactJS charts work in any browser or device without needing proprietary platforms.
