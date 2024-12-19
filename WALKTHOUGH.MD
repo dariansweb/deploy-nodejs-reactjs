@@ -1,4 +1,4 @@
-## **Primary Functionalities for the Walkthrough**
+## **Apps Functionalities**
 
 ### 1. **Publicly Accessible Provider Search**
    **URL:** [HHS Providers Page](https://www.edoracases.com/hhsproviders)
@@ -87,8 +87,8 @@
 
 ---
 
-## **Preparing for the Walkthrough**
-Here’s how to ace the walkthrough:
+## **Examples for Walkthrough**
+
 1. **Focus on Real-World Scenarios**:
    - Demonstrate how a parole officer might search for a provider in their area.
    - Show a judge logging into the dashboard to review a juvenile’s progress without contacting DYS staff.
@@ -105,22 +105,15 @@ Here’s how to ace the walkthrough:
 4. **Demonstrate ReactJS’s Strengths**:
    - Compare the flexibility of ReactJS for embedding charts and customizing dashboards versus the rigidity of PowerBI.
    - Show a side-by-side example if possible (e.g., a ReactJS chart integrated into the dashboard versus an embedded PowerBI dashboard).
-
 ---
-
-DYS Solution to become an integral part of DHS’s operations (Staging Folder)
----
-Focus on demonstrating ReactJS’s flexibility and modularity in comparison to PowerBI, which is more rigid for general web development. 
----
-
-## **Walkthrough Outline: DYS Solution**
+## **DYS Solution Outline**
 
 ### 1. **Introduction**
-   - Briefly introduce the "DYS Solution" as a forward-thinking web application designed to streamline operations and reduce costs for the Department of Human Services.
-   - Emphasize alignment with DHS standards and enterprise guidelines, showcasing a secure, scalable, and modern approach to web development.
+   - The DYS Solution is meticulously designed to align with the rigorous standards and enterprise guidelines established by the Department of Human Services (DHS). This alignment ensures not only compliance with regulatory frameworks but also seamless integration with existing DHS infrastructure. By adhering to these standards, the solution prioritizes data security, system reliability, and user accessibility, addressing the critical needs of the department. 
+   - Its scalable architecture supports future growth, while modern web development methodologies guarantee a responsive, efficient, and intuitive user experience. This thoughtful design approach underscores a commitment to maintaining operational consistency while driving innovation.
+
 
 ---
-
 ### 2. **System Architecture Overview**
    - **Diagram**: Present a visual architecture including:
      - **Frontend**: ReactJS with TypeScript for reusable, component-based development.
@@ -128,10 +121,14 @@ Focus on demonstrating ReactJS’s flexibility and modularity in comparison to P
      - **Database Layer**: SQL Server, compatible with DHS’s existing infrastructure.
      - **Integration Points**: PowerBI for high-level dashboards, ReactJS charts for embedded interactivity.
      - **Hosting**: Windows Server with NodeJS, secured via HTTPS.
+
+<div style="text-align: center;">
+  <img src="overview-architecture.png" alt="DYS Architecture Overview" width="500" />
+</div>
+
    - **Comparison to IIS**:
      - Explain NodeJS's role in replacing IIS for hosting applications.
      - Highlight the benefits of NodeJS, such as better scalability, lighter footprint, and modern ecosystem.
-
 ---
 
 ### 3. **Security Implications**
@@ -246,7 +243,4 @@ Focus on demonstrating ReactJS’s flexibility and modularity in comparison to P
    - Highlight rate limiting to protect against brute force and DDoS attacks.
 
 ---
-
-Dude, this plan positions you as a modernizer for DHS while respecting their existing practices and infrastructure. Prove ReactJS’s flexibility and security, and you’ll leave them with no doubt that the DYS Solution is the way forward. Let me know if you need diagrams, demos, or polished slides for this!
-
 

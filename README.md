@@ -13,7 +13,7 @@ This repository provides comprehensive guidance on securely deploying Node.js an
 - **STAGING/**  
   Provides setup instructions and configurations for the staging environment, covering aspects like development server setup, Node.js HTTPS configurations, PM2 tooling, logging, and security scans.
 
-- **0-README.MD**  
+- **WALKTHROUGH.MD**  
   The primary README file offering an overview of the repository's purpose and structure.
 
 - **diagram-overview.md**  
