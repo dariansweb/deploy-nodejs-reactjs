@@ -54,6 +54,10 @@
 
 ## **Development Server Setup**
    - **Purpose**: Build and refine both pages in a secure, isolated environment before public deployment.
+       - [View Development Server](STAGING/1-DEVSERVER.MD)   
+       - [View Dev/IIS Server Setup](STAGING/0-NODEJS-WINDOWS-SETUP.MD)
+       - <div style="text-align: center;"><img src="STAGING/server-iis-setup.png" alt="IIS Setup"" width="500" /></div>
+       - <div style="text-align: center;"><img src="STAGING/server-express-setup.png" alt="No IIS Setup"" width="500" /></div>       
    - **Security Features**:
      - HTTPS enabled for all internal environments.
      - Firewall rules to restrict access to the development server.
@@ -83,8 +87,9 @@
 
 4. **Enterprise Integration:**
    - The dashboards and tools can integrate seamlessly with existing DHS systems (e.g., PowerBI, SQL Server).
+      - [View PowerBI Integration](MODULARITY-POWERBI/4-REACTJS-POWERBI.MD)         
    - Demonstrates how NodeJS and ReactJS complement DHS's technology stack, offering flexibility IIS and ASP.Net can't match.
-
+     - [View NodeJS Hosting Role](STAGING/3-NODEJS-SSL-RELIANCE.MD)   
 ---
 
 ## **Examples for Walkthrough**
@@ -165,8 +170,8 @@
        - PowerBI relies on Microsoft’s ecosystem, creating dependency and limiting innovation outside its predefined scope.
    - **Windows Server Integration**:
      - Describe NodeJS process management on Windows Server using PM2 or running NodeJS as a Windows service.
+       - [View PM2 Process Manager](STAGING/4-NODEJS-PM2-TOOL.MD.MD)          
      - Integration of HTTPS certificates directly into the NodeJS application.
-
 ---
 
 ### 5. **Development and Deployment Workflow**

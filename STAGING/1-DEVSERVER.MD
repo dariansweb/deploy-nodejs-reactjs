@@ -1,4 +1,4 @@
-A **DHS Security-focused presentation**, emphasize how the application’s infrastructure, development environment, and deployment processes adhere to best practices for security and compliance. Let’s start with **Development Server Setup**.
+A **DHS Security-focused presentation**, emphasize how the application’s infrastructure, development environment, and deployment processes adhere to best practices for security and compliance. Let’s start with the **Development Server Setup**.
 
 ---
 
