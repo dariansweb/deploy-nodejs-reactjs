@@ -121,11 +121,7 @@
      - **Database Layer**: SQL Server, compatible with DHS’s existing infrastructure.
      - **Integration Points**: PowerBI for high-level dashboards, ReactJS charts for embedded interactivity.
      - **Hosting**: Windows Server with NodeJS, secured via HTTPS.
-
-<div style="text-align: center;">
-  <img src="overview-architecture.png" alt="DYS Architecture Overview" width="500" />
-</div>
-
+     - <div style="text-align: center;"><img src="overview-architecture.png" alt="DYS Architecture Overview" width="500" /></div>
    - **Comparison to IIS**:
      - Explain NodeJS's role in replacing IIS for hosting applications.
      - Highlight the benefits of NodeJS, such as better scalability, lighter footprint, and modern ecosystem.
