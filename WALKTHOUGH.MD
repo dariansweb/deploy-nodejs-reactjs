@@ -56,8 +56,8 @@
    - **Purpose**: Build and refine both pages in a secure, isolated environment before public deployment.
        - [View Development Server Overview](STAGING/1-DEVSERVER.MD)   
        - [View Dev/IIS Server Setup](STAGING/0-NODEJS-WINDOWS-SETUP.MD)
-       - <div style="text-align: center;"><img src="STAGING/server-iis-setup.png" alt="IIS Setup"" width="500" /></div>
-       - <div style="text-align: center;"><img src="STAGING/server-express-setup.png" alt="No IIS Setup"" width="500" /></div>       
+       - <div style="text-align: center;"><img src="DIAGRAMS/server-iis-setup.png" alt="IIS Setup"" width="500" /></div>
+       - <div style="text-align: center;"><img src="DIAGRAMS/server-express-setup.png" alt="No IIS Setup"" width="500" /></div>       
    - **Security Features**:
      - HTTPS enabled for all internal environments.
      - Firewall rules to restrict access to the development server.
@@ -126,7 +126,7 @@
      - **Database Layer**: SQL Server, compatible with DHS’s existing infrastructure.
      - **Integration Points**: PowerBI for high-level dashboards, ReactJS charts for embedded interactivity.
      - **Hosting**: Windows Server with NodeJS, secured via HTTPS.
-     - <div style="text-align: center;"><img src="overview-architecture.png" alt="DYS Architecture Overview" width="500" /></div>
+     - <div style="text-align: center;"><img src="DIAGRAMS/overview-architecture.png" alt="DYS Architecture Overview" width="500" /></div>
    - **Comparison to IIS**:
      - Explain NodeJS's role in replacing IIS for hosting applications.
      - [View NodeJS Hosting Role](STAGING/3-NODEJS-SSL-RELIANCE.MD)     
@@ -145,7 +145,7 @@
    - **Service Management**:
      - Use PM2 or Windows Service Manager for process monitoring and auto-recovery.
        - [View PM2 Process Manager](STAGING/4-NODEJS-PM2-TOOL.MD)     
-       - <div style="text-align: center;"><img src="STAGING/PM2-Setup.png" alt="PM2 Tool" width="500" /></div>
+       - <div style="text-align: center;"><img src="DIAGRAMS/PM2-Setup.png" alt="PM2 Tool" width="500" /></div>
    - **Compliance**:
      - TypeScript’s static typing ensures secure and maintainable code.
        - [View Typescript Compliance](COMPLIANCE-OWASP/2-TYPESCRIPT-COMPLIANCE.MD)     
@@ -162,6 +162,7 @@
 ---
 
 ### 4. **Enterprise Compatibility**
+   - <div style="text-align: center;"><img src="DIAGRAMS/react-enterprise.png" alt="DYS Architecture Overview" width="500" /></div>     
    - **ReactJS vs. PowerBI**:
      - **Modularity**:
        - ReactJS charts (e.g., Chart.js, D3.js, or Recharts) are fully customizable. Developers can tailor components to fit the exact needs of a web page, seamlessly blending with other UI elements.
