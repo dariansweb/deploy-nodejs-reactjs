@@ -14,19 +14,13 @@ This repository provides comprehensive guidance on securely deploying Node.js an
   Provides setup instructions and configurations for the staging environment, covering aspects like development server setup, Node.js HTTPS configurations, PM2 tooling, logging, and security scans.
 
 - **WALKTHROUGH.MD**  
-  The primary README file offering an overview of the repository's purpose and structure.
-
-- **diagram-overview.md**  
-  A markdown file containing a visual representation of the application's architecture, illustrating the interaction between the frontend, backend, database, integration points, and hosting environment.
-
-- **overview-architecture.png**  
-  An image file depicting the application's architecture diagram for quick reference.
+  The primary README file offering an overview of the DHS-DYS Project's purpose and structure.
 
 ## Getting Started
 
 1. **Explore the Folders**: Navigate through each folder to understand the specific aspects of deploying Node.js and React.js applications securely and efficiently.
 
-2. **Review the Diagram**: Refer to `overview-architecture.png` or `diagram-overview.md` for a visual understanding of the application's architecture.
+2. **Review the Diagrams**: Refer to `overview-architecture.png` or `diagram-overview.md` for a visual understanding of the application's architecture.
 
 3. **Follow the Guidelines**: Implement the best practices and configurations provided to ensure a robust deployment process.
 

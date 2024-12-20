@@ -57,6 +57,7 @@ For more advanced logging, use third-party libraries. The two most popular optio
 - **Advantages**:
   - Flexible and extensible.
   - Suitable for complex applications.
+- [Winston NPM](https://www.npmjs.com/package/winston)
 
 #### **Pino**
 - **Features**:
@@ -83,7 +84,7 @@ For more advanced logging, use third-party libraries. The two most popular optio
 - **Advantages**:
   - Lightweight and fast.
   - Ideal for applications where performance is critical.
-
+- [Pino NPM](https://www.npmjs.com/package/pino)
 ---
 
 ### **4. Log Rotation**

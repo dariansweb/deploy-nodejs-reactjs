@@ -25,12 +25,13 @@
 
 - **Compliance Benefit**:
   - TypeScript’s rigor supports enterprise-grade coding standards, ensuring all data structures and APIs are explicitly typed, reducing the risk of introducing vulnerabilities.
-
+  - [Code Analysis Tools](https://owasp.org/www-community/Source_Code_Analysis_Tools)
 ---
 
 ### **2. OWASP-Aligned Development Practices**
 
 #### **OWASP (Open Web Application Security Project) Compliance**
+- [OWASP Cheatsheet NodeJS](https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html)
 - **Key Practices**:
   1. **Injection Prevention**:
      - Use parameterized queries and ORM libraries (e.g., Sequelize) to protect against SQL injection.
@@ -40,11 +41,12 @@
          replacements: [userId],
          type: Sequelize.QueryTypes.SELECT,
        });
-       ```
+     - [Seqelize SQL Injection Protection](https://sequelize.org/docs/v7/querying/raw-queries/)
 
   2. **XSS Protection**:
      - Escape all user-generated content before rendering.
      - Use libraries like `DOMPurify` to sanitize HTML inputs.
+     - [DOMPurify XSS NPM](https://www.npmjs.com/package/dompurify)
 
   3. **Secure Data Storage**:
      - Encrypt sensitive data using strong encryption algorithms (e.g., AES-256).
@@ -56,6 +58,7 @@
   4. **Secure Logging**:
      - Avoid logging sensitive information like passwords or tokens.
      - Ensure logs are stored securely and rotated periodically.
+     - [NodeJS Logging Strategies](../STAGING/8-NODEJS-LOGGING.MD)
 
   5. **Error Handling**:
      - Prevent error messages from leaking sensitive information.
@@ -108,8 +111,7 @@
     ```
 
 - **Compliance Benefit**:
-  - Authentication and authorization practices safeguard sensitive resources and align with security best practices like **NIST SP 800-63**.
-
+  - Authentication and authorization practices safeguard sensitive resources and align with security best practices like [**NIST SP 800-63**](https://pages.nist.gov/800-63-3/).
 ---
 
 ### **4. Combining Compliance with Tooling**
@@ -123,6 +125,7 @@
 
 - **Scanning for Vulnerabilities**:
   - Use tools like `npm audit` and **Snyk** to identify dependency vulnerabilities.
+  - [Snyk For NodeJS](https://security.snyk.io/package/npm/nodejs)
   - Example:
     ```bash
     npm audit fix
@@ -152,10 +155,12 @@
    - Regularly audit the codebase using tools like **Zap** or **Burp Suite**.
    - Example:
      - Check for XSS vulnerabilities by simulating malicious inputs.
+     - [Zap Scanner](https://www.zaproxy.org/)
 
 3. **Authentication Implementation**:
    - Use Passport.js or Azure AD for authentication workflows.
    - Secure tokens using HTTPS-only cookies.
+   - [Passport.js](https://www.passportjs.org/)
 
 4. **Deployment**:
    - Use CI/CD pipelines to enforce linting, vulnerability scanning, and secure build processes.
