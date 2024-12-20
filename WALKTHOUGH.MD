@@ -54,7 +54,7 @@
 
 ## **Development Server Setup**
    - **Purpose**: Build and refine both pages in a secure, isolated environment before public deployment.
-       - [View Development Server](STAGING/1-DEVSERVER.MD)   
+       - [View Development Server Overview](STAGING/1-DEVSERVER.MD)   
        - [View Dev/IIS Server Setup](STAGING/0-NODEJS-WINDOWS-SETUP.MD)
        - <div style="text-align: center;"><img src="STAGING/server-iis-setup.png" alt="IIS Setup"" width="500" /></div>
        - <div style="text-align: center;"><img src="STAGING/server-express-setup.png" alt="No IIS Setup"" width="500" /></div>       
@@ -71,7 +71,7 @@
 
 ---
 
-## **Key Talking Points for the CSO and Leadership**
+## **Key Talking Points**
 1. **Aligning with DHS's Mission:**
    - The Provider Search and Juvenile Case Progress Dashboard directly address gaps in accessibility and operational efficiency.
    - These tools empower court personnel and reduce the burden on DYS staff.
