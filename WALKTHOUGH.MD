@@ -156,7 +156,7 @@
      - Secure authentication, authorization mechanisms. Logging mechanisms. Deployment Mechanisms.
        - [View Authentication](COMPLIANCE-OWASP/4-AUTHENTICATION-SECURITY.MD)                   
        - [View Logging](STAGING/8-NODEJS-LOGGING.MD)
-       - [View Deployment Security](COMPLIANCE-OWASP/6-DEPLOYMENT-SECURITY.Md)
+       - [View Deployment Security](COMPLIANCE-OWASP/6-DEPLOYMENT-SECURITY.MD)
        - [View Deployment Encryption](COMPLIANCE-OWASP/8-DEPLOYMENT-ENCRYPTION.MD)
        - [View Deployment CI/CD](COMPLIANCE-OWASP/7-DEPLOY-CI-CD-SECURELY.MD)              
 ---
