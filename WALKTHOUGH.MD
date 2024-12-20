@@ -129,8 +129,9 @@
      - <div style="text-align: center;"><img src="overview-architecture.png" alt="DYS Architecture Overview" width="500" /></div>
    - **Comparison to IIS**:
      - Explain NodeJS's role in replacing IIS for hosting applications.
+     - [View NodeJS Hosting Role](STAGING/3-NODEJS-SSL-RELIANCE.MD)     
      - Highlight the benefits of NodeJS, such as better scalability, lighter footprint, and modern ecosystem.
-     - [View NodeJS Hosting Role](STAGING/3-NODEJS-SSL-RELIANCE.MD)
+     - [View NodeJS Benefits Role](STAGING/3-NODEJS-BENEFITS-OVER-IIS.MD)
 ---
 
 ### 3. **Security Implications**
@@ -151,8 +152,13 @@
      - OWASP-aligned development practices.
        - [View OWASP Compliance](COMPLIANCE-OWASP/3-OWASP-COMPLIANCE.MD)     
        - [View OWASP Ensuring](COMPLIANCE-OWASP/5-OWASP-ENSURING-PRACTICE.MD)     
-     - Secure authentication and authorization mechanisms.
-       - [View Mechanisms](COMPLIANCE-OWASP/4-AUTHENTICATION-SECURITY.MD)          
+       - [View OWASP Key Storage](COMPLIANCE-OWASP/9-COMPLIANCE-KEYS-VARIABLES.MD)     
+     - Secure authentication, authorization mechanisms. Logging mechanisms. Deployment Mechanisms.
+       - [View Authentication](COMPLIANCE-OWASP/4-AUTHENTICATION-SECURITY.MD)                   
+       - [View Logging](STAGING/8-NODEJS-LOGGING.MD)
+       - [View Deployment Security](COMPLIANCE-OWASP/6-DEPLOYMENT-SECURITY)
+       - [View Deployment Encryption](COMPLIANCE-OWASP/8-DEPLOYMENT-ENCRYPTION.MD)
+       - [View Deployment CI/CD](COMPLIANCE-OWASP/7-DEPLOY-CI-CD-SECURELY.MD)              
 ---
 
 ### 4. **Enterprise Compatibility**
@@ -170,7 +176,7 @@
        - PowerBI relies on Microsoft’s ecosystem, creating dependency and limiting innovation outside its predefined scope.
    - **Windows Server Integration**:
      - Describe NodeJS process management on Windows Server using PM2 or running NodeJS as a Windows service.
-       - [View PM2 Process Manager](STAGING/4-NODEJS-PM2-TOOL.MD.MD)          
+       - [View PM2 Process Manager](STAGING/4-NODEJS-PM2-TOOL.MD)          
      - Integration of HTTPS certificates directly into the NodeJS application.
 ---
 

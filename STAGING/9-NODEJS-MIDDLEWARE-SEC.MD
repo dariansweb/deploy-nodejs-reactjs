@@ -108,5 +108,5 @@ Implementing middleware for rate limiting, input validation, and CSRF protection
 - Input Validation: Safeguard against malicious inputs using libraries like `Joi`.
 - CSRF Protection: Shield sensitive operations with `csurf`.
 
-Secure coding practices start with small, consistent steps. You've got this, dude! 💪
+Secure coding practices start with small, consistent steps!
 ```
