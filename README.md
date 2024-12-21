@@ -6,7 +6,7 @@ This repository contains a comprehensive collection of resources, documentation,
 
 ## Repository Contents
 
-Certainly! Here's a summary of each `.md` file in your repository:
+Here's a summary of each `.md` file in your repository:
 
 ---
 
