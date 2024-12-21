@@ -80,42 +80,39 @@
      2. Conduct internal reviews and testing.
      3. Push to a staging server for final approval.
      4. Deploy to the public server for live access.
-
 ---
-
 ## **ReactJS Charts vs. PowerBI: Proof Points**
 1. **Modularity**:
    - ReactJS charting libraries allow you to:
      - Combine multiple chart types on a single page.
      - Add custom interactions (tooltips, zoom, annotations).
      - Style charts to match your application’s theme seamlessly.
+     - [Modularity Documentation](MODULARITY-POWERBI/1-MODULARITY.MD)
    - PowerBI, while powerful, is less modular. Embedding a single chart often requires embedding an entire dashboard, which may not match the rest of the webpage.
-
 2. **Web Development Workflow**:
    - ReactJS charts are integrated into the development process as reusable components. This allows:
      - Version control with the rest of the codebase.
      - Custom data sources without platform constraints.
+     - [Flexibility Documenation](MODULARITY-POWERBI/2-REACTJS-FLEXIBILITY.MD)
    - PowerBI workflows are separate from application development, requiring additional configurations and reliance on Microsoft platforms.
-
 3. **Performance**:
    - ReactJS charts are optimized for the web, loading directly as part of the frontend.
    - PowerBI dashboards often require significant data pre-processing and API requests, leading to slower load times.
-
+   - [PowerBI React Client](https://github.com/microsoft/powerbi-client-react)
 4. **Platform Independence**:
    - ReactJS works on any platform with a browser.
    - PowerBI ties you to Microsoft’s ecosystem, creating dependencies and potential licensing costs.
-
 ---
-
 ## **Prove the Security and Integration of NodeJS**
 1. **Demo HTTPS Setup**:
    - Show how to configure HTTPS certificates in NodeJS.
    - Use DHS’s internal Certificate Authority to demonstrate compatibility.
-
+   - [NodeJS Https Setup](STAGING/2-NODEJSHTTPS.MD)
 2. **Service Management**:
    - Demonstrate PM2 managing NodeJS processes on Windows Server.
    - Explain clustering for performance and fault tolerance.
-
+   - [NodeJS Service Management PM2](STAGING/4-NODEJS-PM2-TOOL.MD)
+   - <div style="text-align: center;"><img src="DIAGRAMS/PM2-Setup.png" alt="No IIS Setup"" width="500" /></div>       
 3. **Mock Attacks**:
    - Simulate XSS or CSRF attacks and show how your middleware prevents them.
    - Highlight rate limiting to protect against brute force and DDoS attacks.
