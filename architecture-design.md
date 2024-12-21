@@ -43,58 +43,114 @@ The DYS Solution is designed to provide a secure, modular, and scalable system f
 3. Dev Server → Prod/Public Servers: Pushes JSON files securely.
 4. Secrets Manager → All Servers: Provides API keys and encryption keys as needed.
 ```
-
----
-
 ## **3. Security Measures**
 
 ### **3.1 Encryption**
-1. **Data at Rest**:
-   - All JSON files are encrypted using AES-256.
-   - Example encryption flow:
-     ```javascript
-     const cipher = crypto.createCipheriv('aes-256-cbc', key, iv);
-     const encrypted = cipher.update(data, 'utf8', 'hex') + cipher.final('hex');
-     ```
 
-2. **Data in Transit**:
+#### **1. Data at Rest**:
+- All JSON files are encrypted using AES-256-GCM.
+- Example encryption flow:
+  ```javascript
+  const cipher = crypto.createCipheriv('aes-256-gcm', key, iv);
+  const encrypted = cipher.update(data, 'utf8', 'hex') + cipher.final('hex');
+  const authTag = cipher.getAuthTag(); // Attach this for validation
+  ```
+---
+### **Why AES-256-GCM is Preferred**
+AES-256-GCM (Galois/Counter Mode) is the preferred encryption standard in modern cryptographic practices due to its enhanced security features compared to CBC (Cipher Block Chaining): 
+**Recommendation**: Wherever possible, use AES-256-GCM instead of AES-256-CBC for encrypting sensitive data to align with modern cryptographic standards and enhance security.
+  1. **Built-In Integrity Verification**:
+     - GCM includes an **authentication tag** that ensures both the confidentiality and integrity of the encrypted data.
+     - This eliminates the need for a separate message authentication code (MAC), reducing complexity and potential vulnerabilities.
+
+  2. **Parallelizable for Performance**:
+     - GCM allows for faster encryption and decryption as it supports parallel processing of blocks, making it more efficient for high-throughput applications.
+
+  3. **Resilience Against Padding Attacks**:
+     - Unlike CBC, GCM does not require padding, reducing the risk of padding oracle attacks.
+
+  4. **Standards Compliance**:
+     - AES-GCM is recommended by NIST (National Institute of Standards and Technology) for applications requiring high levels of security and performance.
+
+  5. **Ease of Use**:
+     - The inclusion of an **authentication tag** simplifies secure transmission of encrypted data, ensuring tamper-proof communication.
+---      
+#### **2. Data in Transit**:
    - Uses HTTPS or SFTP for secure data transmission.
    - Example: SFTP file transfer from Dev to Public Server:
-     ```bash
-     scp data.json.enc user@publicserver:/var/www/data/
+     ``` PS
+      scp .\data.json.enc user@publicserver:/var/www/data/
      ```
 
 ### **3.2 Authentication and Access Control**
 1. **Environment Isolation**:
    - SQL Server is only accessible to the Dev Server.
    - No database access for Public Server.
+
 2. **Secrets Management**:
-   - API keys and encryption keys are stored in a Secrets Manager.
-   - Example: AWS Secrets Manager fetch:
+   - API keys and encryption keys are stored securely in **Azure Key Vault**.
+   - Azure Key Vault ensures centralized management, secure access, and compliance with DHS standards.
+   - Example: Fetching a secret from Azure Key Vault in Node.js:
      ```javascript
-     const secretsManager = new AWS.SecretsManager();
-     secretsManager.getSecretValue({ SecretId: 'EncryptionKey' }, callback);
+     const { DefaultAzureCredential } = require('@azure/identity');
+     const { SecretClient } = require('@azure/keyvault-secrets');
+
+     const keyVaultName = '<Your-KeyVault-Name>';
+     const vaultUri = `https://${keyVaultName}.vault.azure.net`;
+     const credential = new DefaultAzureCredential();
+
+     const client = new SecretClient(vaultUri, credential);
+
+     async function getSecret(secretName) {
+         try {
+             const secret = await client.getSecret(secretName);
+             console.log(`Secret Value: ${secret.value}`);
+         } catch (err) {
+             console.error(`Error fetching secret: ${err.message}`);
+         }
+     }
+
+     getSecret('MySecretKey');
      ```
 
----
+3. **Role-Based Access Control (RBAC)**:
+   - Access to Azure Key Vault is restricted using **Azure AD Role-Based Access Control**.
+   - Managed identities or service principals authenticate the Dev Server to fetch secrets securely.
+   - This approach ensures:
+     - Minimal privileges for each application.
+     - Full control and auditability for DHS IT.
 
-## **4. Compliance**
-### **4.1 OWASP Standards**
+4. **Auditing and Monitoring**:
+   - Azure Monitor logs all access to the Key Vault for complete visibility.
+   - Alerts can be configured for unauthorized access attempts or suspicious behavior.
+---
+### **4. Compliance**
+
+#### **4.1 OWASP Standards**
 - **Secure Data Handling**:
-  - All sensitive data is encrypted both at rest and in transit.
+  - All sensitive data is encrypted both at rest and in transit using AES-256-GCM.
+  - Aligns with the OWASP Top 10 recommendations for secure data management.
+  - [Learn More: OWASP Top 10](https://owasp.org/www-project-top-ten/)
 - **Access Control**:
-  - Role-based access for each server ensures minimal exposure.
+  - Role-based access ensures minimal privilege for each server and user.
 - **Logging and Monitoring**:
-  - Logs are maintained for server access, data transfers, and encryption operations.
+  - Logs are maintained for all key access, data transfers, and server access, meeting OWASP guidelines for secure monitoring.
 
-### **4.2 NIST Compliance**
+#### **4.2 NIST Compliance**
 - **Data Encryption**:
-  - AES-256 is used, meeting FIPS 140-2 requirements.
-- **Key Management**:
-  - Secrets Manager handles secure key storage and rotation.
+  - AES-256-GCM is used, meeting FIPS 140-2 and NIST SP 800-57 recommendations for encryption standards.
+  - [Learn More: NIST SP 800-57](https://csrc.nist.gov/publications/detail/sp/800-57-part-1/rev-5/final)
+- **Authentication and Access Control**:
+  - Access policies align with NIST SP 800-63 guidelines for secure authentication.
+  - [Learn More: NIST SP 800-63](https://www.nist.gov/special-publication-800-63)
+- **Key Management and Rotation**:
+  - All encryption keys are stored securely in **Azure Key Vault**, ensuring compliance with NIST SP 800-57 key management standards.
+  - **Key Rotation**:
+    - Keys are rotated periodically to reduce the risk of compromise.
+    - Automated rotation is configured in Azure Key Vault, ensuring seamless updates without manual intervention.
+    - Rotation intervals align with DHS’s compliance policies, typically every 90–180 days or as per specific security requirements.
 
----
-
+--- 
 ## **5. Addressing Foreseen Questions**
 
 ### **5.1 Network and Data Flow**
@@ -117,14 +173,36 @@ The DYS Solution is designed to provide a secure, modular, and scalable system f
    - Dev Server encrypts all data, so no plaintext is exposed.
 
 ---
-
 ### **5.3 Scalability**
-1. **How does the system handle increased traffic?**
-   - Public Server serves pre-generated static files, making it inherently scalable.
-   - JSON file generation can be optimized for increased data volumes.
+**Note**: By leveraging **Content Delivery Networks (CDNs)** and caching strategies, the system ensures high performance and reliability. CDNs distribute static and frequently accessed content (e.g., JSON files) to servers closer to users, reducing latency and load on the Public Server. Caching further optimizes performance by allowing browsers and edge nodes to store copies of data, minimizing redundant requests and ensuring faster access to critical resources.
+#### **1. How does the system handle increased traffic?**
+- **Public Server Scalability**:
+  - The Public Server is designed to serve **pre-generated static files**, making it lightweight and inherently scalable.
+  - **Use of Content Delivery Networks (CDNs)**:
+    - Static files, including encrypted JSON files and frontend assets, are distributed through a **CDN** to ensure global availability and low-latency access.
+    - Examples: Azure CDN, AWS CloudFront, or Akamai.
+    - Benefits:
+      - **Load Distribution**: Offloads traffic from the Public Server.
+      - **Edge Caching**: Files are cached closer to users for faster access.
+  - **Caching Strategies**:
+    - Frequently accessed JSON files are cached in the browser or on the CDN edge nodes.
+    - **Cache-Control Headers**:
+      - Static files use long-lived cache headers for efficiency:
+        ```http
+        Cache-Control: public, max-age=31536000, immutable
+        ```
+      - JSON files use shorter cache times to ensure timely updates:
+        ```http
+        Cache-Control: public, max-age=3600
+        ```
+    - Stale files are invalidated when updates are pushed from the Dev Server to ensure data freshness.
+
+#### **2. Prod Server Scalability**:
+- The Prod Server uses **Node.js clustering** to handle concurrent requests efficiently:
+  - A multi-threaded approach ensures even high traffic does not overwhelm the server.
+  - Load balancers distribute incoming requests across Node.js instances.
 
 ---
-
 ## **6. Operational Workflow**
 
 ### **6.1 Data Generation**
@@ -136,10 +214,77 @@ The DYS Solution is designed to provide a secure, modular, and scalable system f
 
 ### **6.3 Deployment**
 - JSON files are securely pushed to Prod and Public Servers.
-
+---
 ### **6.4 Logging and Monitoring**
-- All file transfers, encryption operations, and key accesses are logged.
 
+#### **1. Centralized Logging for Security and Compliance**
+- **Tools Used**:
+  - **Azure Monitor**:
+    - Integrated with Azure Key Vault for real-time logging of secret access and management events.
+    - Provides dashboards and alerts for auditing and proactive monitoring.
+  - **ELK Stack** (Elasticsearch, Logstash, Kibana):
+    - Centralized log aggregation and analysis for all server activity.
+    - Dashboards provide visibility into system operations, including access patterns and anomalies.
+  - **Application-Level Logging**:
+    - Node.js applications log key operations using libraries like `winston` or `pino`.
+
+#### **2. Example Log Entries**
+- **Key Vault Access**:
+  - Tracks every request to Azure Key Vault, including:
+    - Successful retrieval of encryption keys or secrets.
+    - Unauthorized access attempts.
+    - Example:
+      ```json
+      {
+        "timestamp": "2024-12-20T14:32:00Z",
+        "event": "KeyVaultAccess",
+        "status": "Success",
+        "secretId": "MySecretKey",
+        "clientId": "DevServerApp",
+        "sourceIp": "192.168.1.10"
+      }
+      ```
+
+- **File Transfers**:
+  - Logs file encryption, staging, and transfer events for traceability.
+  - Example:
+      ```json
+      {
+        "timestamp": "2024-12-20T15:45:00Z",
+        "event": "FileTransfer",
+        "status": "Success",
+        "fileName": "data.json.enc",
+        "source": "DevServer",
+        "destination": "PublicServer"
+      }
+      ```
+
+- **Failed Authentication Attempts**:
+  - Logs unauthorized attempts to access sensitive resources.
+  - Example:
+      ```json
+      {
+        "timestamp": "2024-12-20T16:12:00Z",
+        "event": "Authentication",
+        "status": "Failed",
+        "username": "UnknownUser",
+        "sourceIp": "203.0.113.45",
+        "reason": "Invalid credentials"
+      }
+      ```
+
+#### **3. Alerts and Anomaly Detection**
+- **Real-Time Alerts**:
+  - Configure alerts for unusual activities, such as:
+    - Multiple failed authentication attempts.
+    - Unauthorized access to Key Vault secrets.
+  - Alerts are delivered via email or SMS for immediate response.
+- **Anomaly Detection**:
+  - Use Azure Monitor or Kibana to detect patterns that deviate from normal behavior, such as unexpected spikes in file access.
+
+#### **4. Retention and Compliance**
+- Logs are stored securely for a minimum of **90 days** or as per DHS compliance requirements.
+- Retained logs are encrypted and periodically reviewed to ensure adherence to security policies.
 ---
 
 ## **7. Diagram**
@@ -190,5 +335,3 @@ The ASCII diagram from earlier can be included here for visual clarity:
    - Maintain detailed documentation of encryption standards and access policies.
 
 ---
-
-This document is structured to address both technical and security concerns comprehensively. Let me know if additional details or modifications are needed! 🚀
