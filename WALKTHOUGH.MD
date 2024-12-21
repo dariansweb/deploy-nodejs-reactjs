@@ -35,8 +35,7 @@
    - The page will:
      - Use HTTPS to encrypt all data.
      - Ensure no sensitive or internal DHS data is exposed.
-     - Include rate-limiting and CAPTCHA (if needed) to prevent abuse.
-
+     - Implements rate-limiting and CAPTCHA to mitigate abuse, ensuring system availability.
 ---
 ### 2. **Juvenile Case Progress Dashboard**
    **URL:** [Client Page Grid Demo](https://www.edoracases.com/demos/clientpagegrid)
@@ -94,7 +93,7 @@
      - Version control with the rest of the codebase.
      - Custom data sources without platform constraints.
      - [Flexibility Documenation](MODULARITY-POWERBI/2-REACTJS-FLEXIBILITY.MD)
-   - PowerBI workflows are separate from application development, requiring additional configurations and reliance on Microsoft platforms.
+   - PowerBI workflows operate independently from application code, requiring additional integration steps and reliance on external platforms.
 3. **Performance**:
    - ReactJS charts are optimized for the web, loading directly as part of the frontend.
    - PowerBI dashboards often require significant data pre-processing and API requests, leading to slower load times.
@@ -115,7 +114,6 @@
    - <div style="text-align: center;"><img src="DIAGRAMS/PM2-Setup.png" alt="No IIS Setup"" width="500" /></div>       
 3. **Mock Attacks**:
    - Simulate XSS or CSRF attacks and show how your middleware prevents them.
-   - Highlight rate limiting to protect against brute force and DDoS attacks.
-
+   - Highlight middleware, rate-limiting, and secure authentication under this section.
 ---
 
