@@ -37,6 +37,7 @@ Diagrams representing system components and workflows:
 - **`overview-architecture.png`**: High-level architecture diagram.
 - **`PM2-Setup.png`**: Configuration diagram for PM2 process management.
 - **`PowerBI-Token-Flow.png`**: Visualization of Power BI token flow.
+- **`5-PM2-Setup.md`**: Steps for configuring PM2. 
 - **`react-enterprise.png`**: Diagram showing ReactJS in enterprise environments.
 - **`server-express-setup.png`**: Node.js server configuration using Express.js.
 - **`server-iis-setup.png`**: Node.js setup alongside IIS.
@@ -77,7 +78,6 @@ Guides and configurations for staging and development:
 - **`3-NODEJS-BENEFITS-OVER-IIS.md`**: Advantages of Node.js over IIS.
 - **`3-NODEJS-SSL-RELIANCE.md`**: SSL setup and its importance in Node.js.
 - **`4-NODEJS-PM2-TOOL.md`**: Introduction to PM2 for process management.
-- **`5-PM2-Setup.md`**: Steps for configuring PM2.
 - **`6-NODEJS-ENVIRONMENT-SEC.md`**: Securing Node.js environments.
 - **`7-NODEJS-SCANS.md`**: Vulnerability scans using tools like npm audit and Snyk.
 - **`8-NODEJS-LOGGING.md`**: Logging strategies for Node.js.
