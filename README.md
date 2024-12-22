@@ -11,7 +11,7 @@ This repository provides a comprehensive guide for securely deploying Node.js an
 ### **Root Files**
 - [**`Architecture Design`**](architecture-design.md): Detailed documentation on the system's architecture, including server roles, data flow, and design principles.
 - [**`Walkthrough Introduction`**](WALKTHOUGH.MD): Step-by-step guide through the implementation, showcasing core features and configurations.
-
+- [**`Key Points`**](NOTES/key-points.md): Summarizes critical aspects of the project.
 ---
 
 ### **Directories**
@@ -22,26 +22,22 @@ Documents focused on ensuring the application aligns with OWASP security standar
 - [**`2 Typescript Compliance`**](COMPLIANCE-OWASP/2-TYPESCRIPT-COMPLIANCE.MD): Secure coding practices using TypeScript.
 - [**`3 OWASP Compliance`**](COMPLIANCE-OWASP/3-OWASP-COMPLIANCE.MD): Strategies for adhering to OWASP standards.
 - [**`4 Authentication`**](COMPLIANCE-OWASP/4-AUTHENTICATION-SECURITY.MD): Best practices for secure authentication and identity protection.
-- [**`5-OWASP in Practice`**](COMPLIANCE-OWASP/5-OWASP-ENSURING-PRACTICE.MD): Aligning development practices with OWASP recommendations.
+- [**`5 OWASP in Practice`**](COMPLIANCE-OWASP/5-OWASP-ENSURING-PRACTICE.MD): Aligning development practices with OWASP recommendations.
 - [**`6 Deployment Security`**](COMPLIANCE-OWASP/6-DEPLOYMENT-SECURITY.MD): Security considerations during application deployment.
-- [**`7-Deploy Ci-CD Securely`**](COMPLIANCE-OWASP/7-DEPLOY-CI-CD-SECURELY.MD): Guidelines for securing CI/CD pipelines.
+- [**`7 Deploy CI-CD Securely`**](COMPLIANCE-OWASP/7-DEPLOY-CI-CD-SECURELY.MD): Guidelines for securing CI/CD pipelines.
 - [**`8 Deploying Encryption`**](COMPLIANCE-OWASP/8-DEPLOYMENT-ENCRYPTION.MD): Encrypting sensitive data during deployments.
 - [**`9 Keys Variable Storage`**](COMPLIANCE-OWASP/9-COMPLIANCE-KEYS-VARIABLES.MD): Secure management of keys and environment variables.
-
+- [**`10 Why A256GCM?`**](NOTES/WHYA256GCM.MD): Explains the advantages of using AES-256-GCM for encryption.
 ---
 
 #### **DIAGRAMS**
 Diagrams representing system components and workflows:
-- [**`Overview Description`**](DIAGRAMS/diagram-overview.MD): Explanations of architecture diagrams.
-- [**`overview-architecture.png`**](DIAGRAMS/overview-architecture.png): High-level architecture diagram.
-- [**`PM2-Setup.png`**](DIAGRAMS/PM2-Setup.png): Configuration diagram for PM2 process management.
-- [**`PowerBI-Token-Flow.png`**](DIAGRAMS/PowerBI-Token-Flow.png): Visualization of Power BI token flow.
-- [**`PM2 Setup Description`**](DIAGRAMS/5-PM2-Setup.MD): Steps for configuring PM2.
-- [**`react-enterprise.png`**](DIAGRAMS/react-enterprise.png): Diagram showing ReactJS in enterprise environments.
-- [**`server-express-setup.png`**](DIAGRAMS/server-express-setup.png): Node.js server configuration using Express.js.
-- [**`server-iis-setup.png`**](DIAGRAMS/server-iis-setup.png): Node.js setup alongside IIS.
-- [**`ReactJS Enterprise Description`**](DIAGRAMS/3-Diagram-React-Enterprise.MD): Description of ReactJS enterprise integration.
-- [**`PowerBI Token Flow Description`**](DIAGRAMS/9-Diagram-PowerBI-Token-Flow.md): Details on Power BI token management flow.
+- [**`Architecture Overview`**](DIAGRAMS/overview-architecture.png): High-level architecture diagram.
+- [**`PM2 Setup`**](DIAGRAMS/PM2-Setup.png): Configuration diagram for PM2 process management.
+- [**`PowerBI Token Flow`**](DIAGRAMS/PowerBI-Token-Flow.png): Visualization of Power BI token flow.
+- [**`React Enterprise`**](DIAGRAMS/react-enterprise.png): Diagram showing ReactJS in enterprise environments.
+- [**`Server Express Setup.png`**](DIAGRAMS/server-express-setup.png): Node.js server configuration using Express.js.
+- [**`Server IIS Setup.png`**](DIAGRAMS/server-iis-setup.png): Node.js setup alongside IIS.
 
 ---
 
@@ -49,13 +45,6 @@ Diagrams representing system components and workflows:
 Files demonstrating modular design and ReactJS flexibility:
 - [**`ReactJS Modularity`**](MODULARITY/1-MODULARITY.MD): Benefits of modular application design.
 - [**`ReactJS Flexibility`**](MODULARITY/2-REACTJS-FLEXIBILITY.MD): Flexibility and scalability of ReactJS.
-
----
-
-#### **NOTES**
-Additional notes and key insights:
-- [**`Key Points`**](NOTES/key-points.md): Summarizes critical aspects of the project.
-- [**`Why A256GCM?`**](NOTES/WHYA256GCM.MD): Explains the advantages of using AES-256-GCM for encryption.
 
 ---
 
