@@ -76,8 +76,15 @@
    - **Purpose**: Build and refine both pages in a secure, isolated environment before public deployment.
        - [View Development Server Overview](STAGING/1-DEVSERVER.MD)   
        - [View Dev/IIS Server Setup](STAGING/0-NODEJS-WINDOWS-SETUP.MD)
-       - <div style="text-align: center;"><img src="DIAGRAMS/server-iis-setup.png" alt="IIS Setup"" width="500" /></div>
-       - <div style="text-align: center;"><img src="DIAGRAMS/server-express-setup.png" alt="No IIS Setup"" width="500" /></div>       
+       - [IIS Setup](DIAGRAMS/server-iis-setup.png)
+       - [No IIS Setup](DIAGRAMS/server-express-setup.png)
+       - <img src="DIAGRAMS/server-iis-setup.png" alt="IIS Setup">
+       - <img src="DIAGRAMS/server-express-setup.png" alt="No IIS Setup">
+       - [![IIS Setup](DIAGRAMS/server-iis-setup.png)](DIAGRAMS/server-iis-setup.png)
+       - [![No IIS Setup](DIAGRAMS/server-express-setup.png)](DIAGRAMS/server-express-setup.png)
+       - ![IIS Setup](DIAGRAMS/server-iis-setup.png)
+       - ![No IIS Setup](DIAGRAMS/server-express-setup.png)
+
    - **Security Features**:
      - HTTPS enabled for all internal environments.
      - Firewall rules to restrict access to the development server.
