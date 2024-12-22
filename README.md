@@ -10,7 +10,7 @@ This repository provides a comprehensive guide for securely deploying Node.js an
 
 ### **Root Files**
 - [**`architecture-design.md`**](architecture-design.md): Detailed documentation on the system's architecture, including server roles, data flow, and design principles.
-- [**`WALKTHROUGH.md`**](WALKTHROUGH.MD): Step-by-step guide through the implementation, showcasing core features and configurations.
+- [**`WALKTHROUGH.md`**](WALKTHOUGH.MD): Step-by-step guide through the implementation, showcasing core features and configurations.
 
 ---
 
