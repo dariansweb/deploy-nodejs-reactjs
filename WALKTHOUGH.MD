@@ -23,7 +23,7 @@
 ---
 ## **Apps Functionalities**
 ### 1. **Publicly Accessible Provider Search**
-   **URL:** [HHS Providers Page](https://www.edoracases.com/hhsproviders)
+   **Prototype URL:** [HHS Providers Demo](https://www.edoracases.com/hhsproviders)
 
    **Purpose:** 
    - A public resource for judges, parole officers, and court workers to quickly locate youth service providers.
@@ -49,7 +49,7 @@
 ---
 
 ### 2. **Juvenile Case Progress Dashboard**
-   **URL:** [Client Page Grid Demo](https://www.edoracases.com/demos/clientpagegrid)
+   **Prototype URL:** [Client Page Grid Demo](https://www.edoracases.com/demos/clientpagegrid)
 
    **Purpose:** 
    - A private resource for judges, parole officers, and court workers to track juveniles’ progress post-commitment.
