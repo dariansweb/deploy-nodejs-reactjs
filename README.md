@@ -71,7 +71,7 @@ Resources for integrating Power BI into the application:
 
 #### **STAGING**
 Guides and configurations for staging and development:
-- [**`0-NODEJS-WINDOWS-SETUP.md`**](STAGING/0-NODEJS-WINDOWS-SETUP.md): Instructions for setting up Node.js on Windows Server.
+- [**`0-NODEJS-WINDOWS-SETUP.md`**](STAGING/0-NODEJS-WINDOWS-SETUP.MD): Instructions for setting up Node.js on Windows Server.
 - [**`1-DEVSERVER.md`**](STAGING/1-DEVSERVER.MD): Configuring the development server.
 - [**`2-NODEJSHTTPS.md`**](STAGING/2-NODEJSHTTPS.MD): Setting up HTTPS in Node.js.
 - [**`3-NODEJS-BENEFITS-OVER-IIS.md`**](STAGING/3-NODEJS-BENEFITS-OVER-IIS.MD): Advantages of Node.js over IIS.
