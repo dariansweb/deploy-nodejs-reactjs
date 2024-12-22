@@ -64,6 +64,8 @@ The DYS Solution is designed to provide a secure, modular, and scalable system f
      ``` PS
       scp .\data.json.enc user@publicserver:/var/www/data/
      ```
+---
+
 ### **3.2 Authentication and Access Control**
 1. **Environment Isolation**:
    - SQL Server is only accessible to the Dev Server.
