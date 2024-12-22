@@ -170,4 +170,4 @@ const sm = new secretsManager();
 - **Key Vaults** are ideal for large, scalable, and security-critical systems requiring centralized management and auditing.
 - **Environment Variables** are sufficient for simpler applications or during development phases.
 
-For most modern deployments, **Key Vaults** are the preferred approach due to their advanced security features, scalability, and integration capabilities. Let me know if you’d like examples for a specific setup!
+For most modern deployments, **Key Vaults** are the preferred approach due to their advanced security features, scalability, and integration capabilities.

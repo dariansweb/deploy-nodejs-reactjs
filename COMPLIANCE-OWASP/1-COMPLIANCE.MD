@@ -113,6 +113,7 @@
 
 - **Compliance Benefit**:
   - Authentication and authorization practices safeguard sensitive resources and align with security best practices like [**NIST SP 800-63**](https://pages.nist.gov/800-63-3/).
+
 ---
 
 ### **4. Combining Compliance with Tooling**

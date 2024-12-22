@@ -5,40 +5,62 @@ Encrypting sensitive deployment data is crucial for protecting secrets like API 
 ## **1. Use Secret Management Tools**
 
 ### **A. Cloud-Based Secret Managers**
+
 1. **AWS Secrets Manager**:
    - Stores and encrypts secrets like API keys and credentials.
    - Automatically rotates secrets.
-   - Example:
+   - Example to create a secret:
      ```bash
      aws secretsmanager create-secret --name MyDatabaseSecret --secret-string '{"username":"dbuser","password":"dbpass"}'
      ```
-     Access in your application:
+   - Example to access a secret in your application:
      ```javascript
      const AWS = require('aws-sdk');
      const secretsManager = new AWS.SecretsManager();
+
      secretsManager.getSecretValue({ SecretId: 'MyDatabaseSecret' }, (err, data) => {
-       if (err) throw err;
-       const secret = JSON.parse(data.SecretString);
+         if (err) throw err;
+         const secret = JSON.parse(data.SecretString);
+         console.log(secret);
      });
      ```
 
-2. **Azure Key Vault**:
-   - Centralized key management for Azure-hosted applications.
-   - Example:
-     ```bash
-     az keyvault secret set --vault-name MyKeyVault --name "DatabasePassword" --value "dbpassword"
+2. **Azure Key Vault (Preferred)**:
+   - Centralized management of secrets for Azure-hosted applications.
+   - Enables secure storage and access with role-based permissions.
+   - Example to fetch a secret in Node.js:
+     ```javascript
+     const { DefaultAzureCredential } = require('@azure/identity');
+     const { SecretClient } = require('@azure/keyvault-secrets');
+
+     const vaultName = '<Your-KeyVault-Name>';
+     const vaultUri = `https://${vaultName}.vault.azure.net`;
+     const credential = new DefaultAzureCredential();
+
+     const client = new SecretClient(vaultUri, credential);
+
+     async function getSecret(secretName) {
+         try {
+             const secret = await client.getSecret(secretName);
+             console.log(`Secret Value: ${secret.value}`);
+         } catch (err) {
+             console.error(`Error fetching secret: ${err.message}`);
+         }
+     }
+
+     getSecret('EncryptionKey');
      ```
 
 3. **HashiCorp Vault**:
    - Open-source solution for securely managing secrets.
-   - Example:
+   - Example to store a secret:
      ```bash
      vault kv put secret/database password=dbpassword
      ```
 
 4. **Google Secret Manager**:
    - Manages secrets for Google Cloud applications.
-   - Example:
+   - Example to create a secret:
      ```bash
      gcloud secrets create my-secret --data-file=secret-value.txt
      ```
@@ -46,6 +68,8 @@ Encrypting sensitive deployment data is crucial for protecting secrets like API 
 ---
 
 ### **B. Environment Variables**
+- Store secrets as environment variables in CI/CD pipelines.
+- Use Azure DevOps or GitHub Actions to manage secrets securely.
 - Store secrets as encrypted environment variables in CI/CD tools (e.g., GitHub Actions, GitLab CI, Jenkins).
 - **GitHub Actions Example**:
   1. Add secrets via **Settings > Secrets**.
@@ -60,20 +84,38 @@ Encrypting sensitive deployment data is crucial for protecting secrets like API 
 ## **2. Encrypt Sensitive Files**
 
 ### **A. Encrypt Configuration Files**
-- Use tools like **GPG** or **OpenSSL** to encrypt `.env` or `.config` files.
-- Example with GPG:
-  ```bash
-  gpg --encrypt --recipient "your-email@example.com" .env
-  ```
-  Decrypt before deployment:
-  ```bash
-  gpg --decrypt .env.gpg > .env
-  ```
+- Use AES-256-GCM for encrypting sensitive files like `.env`.
+- Example:
+  ```javascript
+  const crypto = require('crypto');
 
-### **B. Use Encrypted Volumes**
-- Store sensitive data on encrypted disks or volumes:
-  - **Linux**: Use LUKS for disk encryption.
-  - **AWS**: Enable EBS encryption.
+  const algorithm = 'aes-256-gcm';
+  const key = crypto.randomBytes(32);
+  const iv = crypto.randomBytes(12); // GCM requires a 12-byte IV
+
+  const encrypt = (data) => {
+      const cipher = crypto.createCipheriv(algorithm, key, iv);
+      let encrypted = cipher.update(data, 'utf8', 'hex');
+      encrypted += cipher.final('hex');
+      const authTag = cipher.getAuthTag().toString('hex');
+      return { encrypted, iv: iv.toString('hex'), authTag };
+  };
+
+  const decrypt = (encrypted, iv, authTag) => {
+      const decipher = crypto.createDecipheriv(algorithm, key, Buffer.from(iv, 'hex'));
+      decipher.setAuthTag(Buffer.from(authTag, 'hex'));
+      let decrypted = decipher.update(encrypted, 'hex', 'utf8');
+      decrypted += decipher.final('utf8');
+      return decrypted;
+  };
+
+  const data = 'Sensitive Information';
+  const { encrypted, iv, authTag } = encrypt(data);
+  console.log('Encrypted:', encrypted);
+
+  const decrypted = decrypt(encrypted, iv, authTag);
+  console.log('Decrypted:', decrypted);
+  ```
 
 ---
 
@@ -81,7 +123,7 @@ Encrypting sensitive deployment data is crucial for protecting secrets like API 
 
 ### **A. Use Strong Encryption Algorithms**
 - Always use secure and modern encryption standards:
-  - Symmetric Encryption: **AES-256**
+  - Symmetric Encryption: **AES-256 GCM**
   - Asymmetric Encryption: **RSA-2048** or **Elliptic Curve Cryptography (ECC)**.
 
 ### **B. Rotate Keys Regularly**
@@ -309,4 +351,4 @@ To ensure certificates remain valid and secure throughout their lifecycle:
 
 ---
 
-By encrypting sensitive deployment data and integrating these practices into your workflows, you ensure that critical assets remain secure throughout the deployment lifecycle. Let me know if you need detailed examples for specific tools or environments!
+By encrypting sensitive deployment data and integrating these practices into our workflows, we ensure that critical assets remain secure throughout the deployment lifecycle.

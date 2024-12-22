@@ -213,16 +213,17 @@ Deploying an application securely is critical to protect sensitive data, ensure 
 ---
 
 ## **Summary of Key Practices**
-| Area                     | Best Practice                                  |
+
+| **Area**                 | **Best Practice**                              |
 |--------------------------|-----------------------------------------------|
-| Server Hardening         | Update OS, firewall rules, secure SSH         |
-| HTTPS Everywhere         | Use SSL/TLS, enforce HTTPS                    |
-| Secure Configurations    | Use environment variables, sanitize errors    |
-| CI/CD Security           | Automate scans, secure secrets, enable rollbacks |
-| Logging & Monitoring     | Centralize logs, track metrics, enable alerts |
-| Authentication           | Use OAuth2, secure sessions, enforce RBAC     |
-| Backup & Recovery        | Automate backups, test disaster recovery      |
+| **Server Hardening**      | Update OS, configure firewall rules, and secure SSH. |
+| **HTTPS Everywhere**      | Use SSL/TLS and enforce HTTPS across all endpoints. |
+| **Secure Configurations** | Leverage environment variables and sanitize error messages. |
+| **CI/CD Security**        | Automate vulnerability scans, secure secrets, and enable rollbacks. |
+| **Logging & Monitoring**  | Centralize logs, track key metrics, and enable alerts for anomalies. |
+| **Authentication**        | Use OAuth2, secure sessions, and enforce Role-Based Access Control (RBAC). |
+| **Backup & Recovery**     | Automate backups and regularly test disaster recovery processes. |
 
 ---
 
-By following these practices, your deployments will be more secure, resilient, and compliant with industry standards. Let me know if you’d like specific examples or assistance with any aspect of secure deployment!
+By following these practices, our deployments will be more secure, resilient, and compliant with industry standards.

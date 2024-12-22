@@ -1,6 +1,6 @@
 Aligning with **OWASP compliance** involves adopting best practices and guidelines outlined by the **OWASP Top 10** (Open Web Application Security Project). This ensures your application is resilient to common security threats and adheres to industry-recognized standards.
 
-Below is a detailed guide to aligning your Node.js and ReactJS applications with OWASP compliance:
+Below is a detailed guide to aligning a Node.js and ReactJS applications with OWASP compliance:
 
 ---
 

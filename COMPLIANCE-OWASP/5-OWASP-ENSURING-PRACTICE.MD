@@ -219,4 +219,4 @@ Ensuring **OWASP-aligned security** requires systematically incorporating OWASPâ
 
 ---
 
-By embedding these practices into your workflows, we can ensure robust security while aligning with OWASP standards. Let me know if you'd like templates, code snippets, or tools to help with implementation!
+By embedding these practices into our workflows, we can ensure robust security while aligning with OWASP standards.
