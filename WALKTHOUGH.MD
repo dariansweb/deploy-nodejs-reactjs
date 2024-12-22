@@ -129,13 +129,19 @@
    - Demonstrate PM2 managing NodeJS processes on Windows Server.
    - Explain clustering for performance and fault tolerance.
    - [NodeJS Service Management PM2](STAGING/4-NODEJS-PM2-TOOL.MD)
-   - <div style="text-align: center;"><img src="DIAGRAMS/PM2-Setup.png" alt="No IIS Setup"" width="500" /></div>       
+   - ![PM2 Setup](DIAGRAMS/PM2-Setup.png)       
+
+---
+
 ### 4. Security Summary
 The DYS Solution employs a multi-layered security approach:
 - **Encryption**: All sensitive data is protected using AES-256-GCM for data at rest and HTTPS for data in transit.
 - **Authentication and Access Control**: Secure login mechanisms with Azure Key Vault for managing API keys and secrets.
 - **Middleware Protections**: Prevents XSS, CSRF, and injection attacks through robust middleware configurations.
 These measures align with DHS standards and ensure a secure environment for sensitive juvenile data.
+
+---
+
 ### 5. Next Steps
 1. Finalize the deployment pipeline:
    - Automate key rotations and secure deployments using CI/CD pipelines.
@@ -143,6 +149,9 @@ These measures align with DHS standards and ensure a secure environment for sens
    - Simulate additional attack vectors and perform penetration testing.
 3. Continue stakeholder engagement:
    - Incorporate feedback from DYS leadership and DHS Security teams.
+
+---
+
 ### Closing Remarks
 The DYS Solution is designed to meet the highest standards of security, scalability, and functionality. By addressing critical gaps in youth services and empowering stakeholders, this solution represents a significant step forward in operational efficiency and data security for the Department of Human Services.
 
