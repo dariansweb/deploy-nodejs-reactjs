@@ -45,7 +45,9 @@
      - Use HTTPS to encrypt all data.
      - Ensure no sensitive or internal DHS data is exposed.
      - Implements rate-limiting and CAPTCHA to mitigate abuse, ensuring system availability.
+
 ---
+
 ### 2. **Juvenile Case Progress Dashboard**
    **URL:** [Client Page Grid Demo](https://www.edoracases.com/demos/clientpagegrid)
 
@@ -78,10 +80,6 @@
        - [View Dev/IIS Server Setup](STAGING/0-NODEJS-WINDOWS-SETUP.MD)
        - [IIS Setup](DIAGRAMS/server-iis-setup.png)
        - [No IIS Setup](DIAGRAMS/server-express-setup.png)
-       - <img src="DIAGRAMS/server-iis-setup.png" alt="IIS Setup">
-       - <img src="DIAGRAMS/server-express-setup.png" alt="No IIS Setup">
-       - [![IIS Setup](DIAGRAMS/server-iis-setup.png)](DIAGRAMS/server-iis-setup.png)
-       - [![No IIS Setup](DIAGRAMS/server-express-setup.png)](DIAGRAMS/server-express-setup.png)
        - ![IIS Setup](DIAGRAMS/server-iis-setup.png)
        - ![No IIS Setup](DIAGRAMS/server-express-setup.png)
 
@@ -95,7 +93,9 @@
      2. Conduct internal reviews and testing.
      3. Push to a staging server for final approval.
      4. Deploy to the public server for live access.
+
 ---
+
 ## **ReactJS Charts vs. PowerBI: Proof Points**
 1. **Modularity**:
    - ReactJS charting libraries allow you to:
@@ -117,7 +117,9 @@
 4. **Platform Independence**:
    - ReactJS works on any platform with a browser.
    - PowerBI ties you to Microsoft’s ecosystem, creating dependencies and potential licensing costs.
+
 ---
+
 ## **Prove the Security and Integration of NodeJS**
 1. **Demo HTTPS Setup**:
    - Show how to configure HTTPS certificates in NodeJS.
@@ -145,4 +147,3 @@ These measures align with DHS standards and ensure a secure environment for sens
 The DYS Solution is designed to meet the highest standards of security, scalability, and functionality. By addressing critical gaps in youth services and empowering stakeholders, this solution represents a significant step forward in operational efficiency and data security for the Department of Human Services.
 
 ---
-
