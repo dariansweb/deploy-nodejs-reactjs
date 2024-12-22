@@ -304,8 +304,6 @@ The ASCII diagram from earlier can be included here for visual clarity:
                          +---------------------------+
 ```
 
----
-
 ## **8. Next Steps**
 1. **Finalize CI/CD Pipeline**:
    - Automate JSON file generation and deployment.
