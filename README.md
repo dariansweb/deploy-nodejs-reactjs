@@ -12,6 +12,7 @@ This repository provides a comprehensive guide for securely deploying Node.js an
 - **`architecture-design.md`**: Detailed documentation on the system's architecture, including server roles, data flow, and design principles.
 - **`README.md`**: Overview of the repository, its structure, and its purpose.
 - **`WALKTHROUGH.md`**: Step-by-step guide through the implementation, showcasing core features and configurations.
+- [Walkthough Here](WALKTHOUGH.MD)
 
 ---
 
