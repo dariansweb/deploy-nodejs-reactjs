@@ -55,7 +55,9 @@ The DYS Solution is designed to provide a secure, modular, and scalable system f
   const encrypted = cipher.update(data, 'utf8', 'hex') + cipher.final('hex');
   const authTag = cipher.getAuthTag(); // Attach this for validation
   ```
+
 ---
+
 #### **2. Data in Transit**:
    - Uses HTTPS or SFTP for secure data transmission.
    - Example: SFTP file transfer from Dev to Public Server:
@@ -103,7 +105,9 @@ The DYS Solution is designed to provide a secure, modular, and scalable system f
 4. **Auditing and Monitoring**:
    - Azure Monitor logs all access to the Key Vault for complete visibility.
    - Alerts can be configured for unauthorized access attempts or suspicious behavior.
+
 ---
+
 ### **4. Compliance**
 
 #### **4.1 OWASP Standards**
@@ -131,6 +135,7 @@ The DYS Solution is designed to provide a secure, modular, and scalable system f
     - Rotation intervals align with DHS’s compliance policies, typically every 90–180 days or as per specific security requirements.
 
 --- 
+
 ## **5. Additional Questions**
 
 ### **5.1 Network and Data Flow**
@@ -153,6 +158,7 @@ The DYS Solution is designed to provide a secure, modular, and scalable system f
    - Dev Server encrypts all data, so no plaintext is exposed.
 
 ---
+
 ### **5.3 Scalability**
 **Note**: By leveraging **Content Delivery Networks (CDNs)** and caching strategies, the system ensures high performance and reliability. CDNs distribute static and frequently accessed content (e.g., JSON files) to servers closer to users, reducing latency and load on the Public Server. Caching further optimizes performance by allowing browsers and edge nodes to store copies of data, minimizing redundant requests and ensuring faster access to critical resources.
 #### **1. How does the system handle increased traffic?**
@@ -183,6 +189,7 @@ The DYS Solution is designed to provide a secure, modular, and scalable system f
   - Load balancers distribute incoming requests across Node.js instances.
 
 ---
+
 ## **6. Operational Workflow**
 
 ### **6.1 Data Generation**
@@ -194,7 +201,9 @@ The DYS Solution is designed to provide a secure, modular, and scalable system f
 
 ### **6.3 Deployment**
 - JSON files are securely pushed to Prod and Public Servers.
+
 ---
+
 ### **6.4 Logging and Monitoring**
 
 #### **1. Centralized Logging for Security and Compliance**
@@ -265,6 +274,7 @@ The DYS Solution is designed to provide a secure, modular, and scalable system f
 #### **4. Retention and Compliance**
 - Logs are stored securely for a minimum of **90 days** or as per DHS compliance requirements.
 - Retained logs are encrypted and periodically reviewed to ensure adherence to security policies.
+
 ---
 
 ## **7. Diagram**
