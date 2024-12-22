@@ -133,16 +133,4 @@ ReactJS is backed by Meta (formerly Facebook) and a large open-source community.
 
 ---
 
-### **Case Study for DHS**
-
-#### **Scenario: Tracking Juvenile Progress**
-1. **Challenge**:
-   - Judges and parole officers need real-time data on juveniles without overloading DHS staff.
-2. **Solution**:
-   - ReactJS powers a modular, interactive dashboard that fetches data from Node.js APIs and integrates with PowerBI for high-level analytics.
-3. **Outcome**:
-   - Flexibility to add new widgets (e.g., progress charts, notifications) and maintain responsiveness for thousands of simultaneous users.
-
----
-
-ReactJS’s modularity, scalability, and adaptability make it a future-proof solution for DHS, ensuring the technology remains flexible for both current needs and future demands. Let me know if you want a slide deck or diagrams to complement this!
+ReactJS’s modularity, scalability, and adaptability make it a future-proof solution for DHS, ensuring the technology remains flexible for both current needs and future demands. 

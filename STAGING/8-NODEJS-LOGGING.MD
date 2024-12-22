@@ -198,4 +198,4 @@ Integrate logging with monitoring tools to proactively identify issues:
 
 ---
 
-By implementing these logging strategies, you can create a secure, maintainable, and scalable logging system tailored to your Node.js application. Let me know if you want help setting up a specific solution!
+By implementing these logging strategies, we can create a secure, maintainable, and scalable logging system tailored to our Node.js application. 

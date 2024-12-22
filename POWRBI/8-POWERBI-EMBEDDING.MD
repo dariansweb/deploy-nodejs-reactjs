@@ -207,5 +207,3 @@ Use the `powerbi-client` library to embed the dashboard.
 ## **Conclusion**
 
 Embedding PowerBI dashboards with ReactJS offers a powerful way to bring data-driven insights directly to users. With proper handling of tokens, dynamic filters, and secure APIs, organizations can deliver robust analytics while maintaining security and scalability.
-
-Let me know if you’d like additional examples or diagrams for embedding workflows!

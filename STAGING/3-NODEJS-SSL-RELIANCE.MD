@@ -95,4 +95,4 @@ If operating without IIS, you can maintain a secure and efficient system by:
 - Leveraging process managers like PM2 for fault tolerance.
 - Integrating a CDN for static assets and a WAF for filtering malicious traffic.
 
-This setup can match or even exceed the security capabilities of IIS, provided it’s configured and monitored correctly. Let me know if you want a detailed implementation plan or additional diagrams!
+This setup can match or even exceed the security capabilities of IIS, provided it’s configured and monitored correctly.

@@ -149,4 +149,4 @@ A **DHS Security-focused presentation**, emphasize how the application’s infra
 
 ---
 
-This approach demonstrates that security is a top priority from development to production, aligning with DHS’s expectations. Let me know if you want help with diagrams, documentation, or other details for this presentation!
+This approach demonstrates that security is a top priority from development to production, aligning with DHS’s expectations.

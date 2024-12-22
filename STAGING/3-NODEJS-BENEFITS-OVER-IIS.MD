@@ -126,5 +126,3 @@ Node.js provides a modern, lightweight, and highly scalable alternative to IIS f
 | **Cost**                | Open-source, low-cost           | Licensing fees for Windows Server|
 
 Node.js offers a compelling case for replacing or complementing IIS in hosting modern applications. Its scalability, flexibility, and alignment with current development trends make it the ideal choice for enterprises looking to innovate.
-
----
