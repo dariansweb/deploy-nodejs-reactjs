@@ -26,6 +26,7 @@
 - **Compliance Benefit**:
   - TypeScript’s rigor supports enterprise-grade coding standards, ensuring all data structures and APIs are explicitly typed, reducing the risk of introducing vulnerabilities.
   - [Code Analysis Tools](https://owasp.org/www-community/Source_Code_Analysis_Tools)
+
 ---
 
 ### **2. OWASP-Aligned Development Practices**
