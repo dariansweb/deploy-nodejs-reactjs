@@ -52,7 +52,8 @@ Documents focused on ensuring the application aligns with OWASP security standar
 - [**`7 Deploy CI-CD Securely`**](COMPLIANCE-OWASP/7-DEPLOY-CI-CD-SECURELY.MD): Guidelines for securing CI/CD pipelines.
 - [**`8 Deploying Encryption`**](COMPLIANCE-OWASP/8-DEPLOYMENT-ENCRYPTION.MD): Encrypting sensitive data during deployments.
 - [**`9 Keys Variable Storage`**](COMPLIANCE-OWASP/9-COMPLIANCE-KEYS-VARIABLES.MD): Secure management of keys and environment variables.
-- [**`10 Why A256GCM?`**](NOTES/WHYA256GCM.MD): Explains the advantages of using AES-256-GCM for encryption.
+- [**`10 Wazah Integration`**](COMPLIANCE-OWASP/10-WAZUH-INTEGRATION.MD): Unified XDR and SIEM protection for endpoints and cloud workloads..
+- [**`11 Why A256GCM?`**](NOTES/WHYA256GCM.MD): Explains the advantages of using AES-256-GCM for encryption.
 
 ---
 
