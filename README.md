@@ -11,7 +11,7 @@ This repository provides a comprehensive guide for securely deploying Node.js an
 ### **Root Files**
 - [**`1. Walkthrough Introduction`**](WALKTHOUGH.MD): Step-by-step guide through the implementation, showcasing core features and configurations.
 - [**`2. Architecture Design`**](architecture-design.md): Detailed documentation on the system's architecture, including server roles, data flow, and design principles.
-- [**`3. Key Points`**](NOTES/key-points.md): Summarizes critical aspects of the project.
+- [**`3. Key Points`**](NOTES/key-points.md): Summarizes critical aspects of a NodeJS web application project.
   
 ---
 
