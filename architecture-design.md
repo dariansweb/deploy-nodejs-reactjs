@@ -292,28 +292,28 @@ The ASCII diagram from earlier can be included here for visual clarity:
                                      | (Pull Data)
                                      v
       +-------------------------------+-------------------------------+
-      |              Dev Server (Node.js + SQLite)                   |
-      |  - Pulls data from SQL Server                                |
-      |  - Encrypts data into JSON files                             |
-      |  - Stores JSON in SQLite for staging and testing             |
-      |  - Pushes JSON files to Prod and Public Servers              |
+      |              Dev Server (Node.js + SQLite)                    |
+      |  - Pulls data from SQL Server                                 |
+      |  - Encrypts data into JSON files                              |
+      |  - Stores JSON in SQLite for staging and testing              |
+      |  - Pushes JSON files to Prod and Public Servers               |
       +-------------------------------+-------------------------------+
                       | (Push Encrypted JSON)              | (Push Encrypted JSON)
                       v                                    v
-      +-----------------------+                 +-----------------------+
-      |     Prod Server       |                 |   Public Server       |
-      |  (Node.js Backend)    |                 |  (Static Hosting)     |
-      |  - Hosts secure pages |                 |  - Serves static pages|
-      |  - Reads JSON files   |                 |  - Reads JSON files   |
-      +-----------------------+                 +-----------------------+
+      +-----------------------+                 +------------------------+
+      |     Prod Server       |                 |   Public Server        |
+      |  (Node.js Backend)    |                 |  (Static Hosting)      |
+      |  - Hosts secure pages |                 |  - Serves static pages |
+      |  - Reads JSON files   |                 |  - Reads JSON files    |
+      +-----------------------+                 +------------------------+
                                      |
                                      | (Access Encryption Keys & Secrets)
                                      v
-                         +---------------------------+
-                         |    Secrets Manager        |
-                         |  - Stores API Keys        |
-                         |  - Manages Encryption Keys|
-                         +---------------------------+
+                         +----------------------------+
+                         |    Secrets Manager         |
+                         |  - Stores API Keys         |
+                         |  - Manages Encryption Keys |
+                         +----------------------------+
 ```
 
 ## **8. Next Steps**

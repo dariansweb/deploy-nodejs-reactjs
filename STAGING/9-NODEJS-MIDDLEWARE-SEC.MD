@@ -109,4 +109,3 @@ Implementing middleware for rate limiting, input validation, and CSRF protection
 - CSRF Protection: Shield sensitive operations with `csurf`.
 
 Secure coding practices start with small, consistent steps!
-```

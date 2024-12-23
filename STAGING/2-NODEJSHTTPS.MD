@@ -130,4 +130,4 @@ This method reduces the load on your Node.js server while leveraging the reverse
 
 ---
 
-With this setup, your **Node.js server is secure, encrypted, and compliant** with DHS’s requirements.
+With this setup, our **Node.js server is secure, encrypted, and compliant** with DHS’s requirements.
