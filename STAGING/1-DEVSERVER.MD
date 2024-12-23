@@ -135,18 +135,4 @@ A **DHS Security-focused presentation**, emphasize how the application’s infra
 
 ---
 
-## **What You’ll Need to Do:**
-1. **Create Supporting Visuals**:
-   - Diagram the server setup, showing how Node.js, PM2, IIS, and HTTPS certificates interact.
-   - Highlight the flow of data between frontend, backend, and database layers.
-
-2. **Prepare a Demo**:
-   - Show the development server in action.
-   - Walk through the HTTPS setup and middleware for request validation.
-
-3. **Provide Documentation**:
-   - Create a handout with the outlined security measures for the CSO to review later.
-
----
-
 This approach demonstrates that security is a top priority from development to production, aligning with DHS’s expectations.
