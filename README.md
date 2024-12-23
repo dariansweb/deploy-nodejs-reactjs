@@ -50,7 +50,7 @@ Files demonstrating modular design and ReactJS flexibility:
 
 ---
 
-#### **POWRBI**
+#### **POWER BI**
 Resources for integrating Power BI into the application:
 - [**`ReactJS with PowerzBI`**](POWRBI/4-REACTJS-POWERBI.MD): ReactJS integration with Power BI.
 - [**`ReactJS PowerBI API`**](POWRBI/5-REACTJS-PBI-API.MD): Utilizing Power BI APIs with ReactJS.
