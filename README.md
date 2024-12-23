@@ -72,7 +72,7 @@ Guides and configurations for staging and development:
 - [**`NodeJS Security Scans`**](STAGING/7-NODEJS-SCANS.MD): Vulnerability scans using tools like npm audit and Snyk.
 - [**`NodeJS Logging Tools`**](STAGING/8-NODEJS-LOGGING.MD): Logging strategies for Node.js.
 - [**`NodJS Middleware Security`**](STAGING/9-NODEJS-MIDDLEWARE-SEC.MD): Middleware security in Node.js.
-- [**`NodJS SQL Server Communication`**](STAGING/10-NODEJSSQLSERVER.MD): Secure communication between Node.js and SQL Server.
+- [**`NodJS SQL Server Communication`**](STAGING/10-NODEJSSQLSErVER.MD): Secure communication between Node.js and SQL Server.
 
 ---
 
