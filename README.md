@@ -29,6 +29,7 @@ Documents focused on ensuring the application aligns with OWASP security standar
 - [**`8 Deploying Encryption`**](COMPLIANCE-OWASP/8-DEPLOYMENT-ENCRYPTION.MD): Encrypting sensitive data during deployments.
 - [**`9 Keys Variable Storage`**](COMPLIANCE-OWASP/9-COMPLIANCE-KEYS-VARIABLES.MD): Secure management of keys and environment variables.
 - [**`10 Why A256GCM?`**](NOTES/WHYA256GCM.MD): Explains the advantages of using AES-256-GCM for encryption.
+
 ---
 
 #### **DIAGRAMS**
