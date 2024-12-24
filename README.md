@@ -21,7 +21,6 @@ This repository is designed to:
 ### **Root Files**
 - [**`1. Walkthrough Introduction`**](WALKTHOUGH.MD): Step-by-step guide through the implementation, showcasing core features and configurations.
 - [**`2. Architecture Design`**](architecture-design.md): Documentation on the system's server roles, data flow, and design principles.
-- [**`3. Key Points`**](NOTES/key-points.md): Summarizes critical aspects of a NodeJS web application project.
   
 ---
 
