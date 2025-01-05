@@ -53,7 +53,7 @@ Documents focused on ensuring the application aligns with OWASP security standar
 - [**`9 Keys Variable Storage`**](COMPLIANCE-OWASP/9-COMPLIANCE-KEYS-VARIABLES.MD): Secure management of keys and environment variables.
 - [**`10 Wazah Integration`**](COMPLIANCE-OWASP/10-WAZUH-INTEGRATION.MD): Unified XDR and SIEM protection for endpoints and cloud workloads..
 - [**`11 Why A256GCM?`**](NOTES/WHYA256GCM.MD): Explains the advantages of using AES-256-GCM for encryption.
-
+- [**`12 JWT Best Practics?`**](COMPLIANCE-OWASP/11-JWT-BEST-PRACTICES.MD): Best Practices for using JSON Web Tokens.
 ---
 
 #### **MODULARITY**
